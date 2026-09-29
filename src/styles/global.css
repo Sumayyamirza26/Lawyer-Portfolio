@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-body text-charcoal bg-surface;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: rgba(212,175,55,0.25);
+    color: #0F172A;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0F172A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28 px-4 md:px-8 lg:px-16 xl:px-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gold-line {
+    @apply w-16 h-0.5 bg-gold;
+  }
+
+  .gold-line-lg {
+    @apply w-24 h-0.5 bg-gold;
+  }
+
+  .section-eyebrow {
+    @apply font-body text-gold text-xs font-semibold uppercase tracking-[0.2em] mb-3;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight;
+  }
+
+  .section-title-light {
+    @apply font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gold text-navy font-semibold text-sm px-7 py-3.5 
+           rounded-none transition-all duration-300 hover:bg-gold-light hover:shadow-gold 
+           hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-white/40 text-white font-semibold text-sm 
+           px-7 py-3.5 rounded-none transition-all duration-300 hover:border-gold hover:text-gold 
+           hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+
+  .btn-outline-dark {
+    @apply inline-flex items-center gap-2 border border-navy/30 text-navy font-semibold text-sm 
+           px-7 py-3.5 rounded-none transition-all duration-300 hover:border-gold hover:text-gold 
+           focus:outline-none focus:ring-2 focus:ring-gold;
+  }
+
+  .card-glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/60 shadow-card;
+  }
+
+  .card-dark-glass {
+    @apply bg-navy/80 backdrop-blur-sm border border-white/10;
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #D4AF37 0%, #E8C84A 50%, #B8962B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #D4AF37, #E8C84A);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Gold shimmer border */
+.gold-border-shimmer {
+  position: relative;
+}
+.gold-border-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(212,175,55,0.3);
+  pointer-events: none;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1;
+    transform: none;
+  }
+}
