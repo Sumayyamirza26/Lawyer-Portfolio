@@ -4,46 +4,32 @@ A modern, elegant, and fully responsive frontend portfolio website built for **A
 
 ---
 
+## 🚀 Live Demo
+
+🔗 **Live Website:** [https://lawyer-portfolio-rosy.vercel.app/](https://lawyer-portfolio-rosy.vercel.app/)
+
+---
+
 ## 📌 Project Overview
 
-This project is a dedicated professional portfolio website designed to showcase legal services, expertise domains, professional milestones, and client testimonials with an authoritative and refined visual aesthetic.
+A modern, frontend-only portfolio website designed for **Adv. Sajad Ahmad Mir** (Founder of Sajad Mir & Associates). It provides an authoritative digital presence where prospective clients can explore practice areas, review career milestones, read testimonials, and easily book legal consultations.
 
-* **Purpose**: To provide a credible digital presence for a legal advocate, enabling prospective clients to explore practice areas, understand professional credentials, and easily schedule consultations.
-* **What Users Can Do**:
-  * Explore core legal practice areas including Civil Litigation, Criminal Law, Family Law, Property Disputes, and Business Advisory.
-  * Learn about the advocate's background, professional credentials, and core practice values.
-  * View dynamic metric counters highlighting cases handled, practice areas, and years of experience.
-  * Follow an interactive timeline tracing career milestones and legal achievements.
-  * Read client feedback through an automated, interactive testimonials carousel.
-  * Connect directly via client-side email consultation booking or instant WhatsApp messaging.
-  * Smoothly navigate between sections using a responsive navigation bar or return to the top via a quick scroll button.
-* **Architecture**: This is a **frontend-only project**. It runs entirely in the client's browser with no server, database, or backend API integrations.
+> **Note:** This is a purely client-side frontend application running entirely in the browser with no backend or database dependencies.
 
 ---
 
 ## ✨ Features
 
-* **Responsive Design**: Fluid layout tailored for mobile devices, tablets, laptops, and desktop screens.
-* **Intro Loading Screen**: Framer Motion preloader with ambient gold glow and loading indicators before rendering content.
-* **Live Scroll Progress Bar**: A sleek progress bar at the very top of the page that tracks user scroll depth in real time.
-* **Sticky Navigation Bar**:
-  * Glassmorphism background transition on scroll.
-  * Active section scrollspy highlighting.
-  * Mobile drawer menu with smooth toggle controls.
-* **Hero Section**: Advocate presentation featuring a stylized portrait card with subtle floating motion, gold gradient typography, and media feature credentials.
-* **Animated Statistics**: IntersectionObserver-powered animated counters displaying key metrics as they enter the viewport.
-* **Practice Areas Grid**: 8 distinct legal service cards with Lucide icons, hover elevation, and direct consultation triggers.
-* **Career Timeline**: Alternating milestone cards detailing professional growth from foundation to ethical advocacy.
-* **Interactive Testimonials Carousel**:
-  * Automatic slide rotation every 5 seconds.
-  * Interactive slide navigation dots.
-  * Previous and next control buttons.
-* **Quick Contact Integrations**:
-  * Direct `mailto:` action button for booking confidential consultations.
-  * Floating WhatsApp button for instant messaging.
-* **Scroll-to-Top Button**: Floating return-to-top button that smoothly appears when scrolling down the page.
-* **Scroll-Reveal Animations**: Lightweight custom React hook (`useReveal`) managing staggered fade-and-slide entry effects.
-* **Accessibility & Reduced Motion**: Full support for `:focus-visible` navigation and `prefers-reduced-motion` media queries.
+* **Responsive Layout**: Clean, adaptable design across mobile, tablet, and desktop devices.
+* **Sticky Navigation**: Glassmorphic navbar with active section scrollspy and a mobile drawer menu.
+* **Scroll Indicators**: Real-time top scroll progress bar and a floating return-to-top button.
+* **Branded Preloader**: Smooth intro loading screen built with Framer Motion.
+* **Animated Counter**: Viewport-triggered statistics highlighting legal experience and cases handled.
+* **Practice Areas Grid**: Interactive service cards detailing 8 core legal practice areas.
+* **Milestone Timeline**: Structured chronological showcase of legal experience and professional growth.
+* **Testimonials Carousel**: Client review slider featuring automatic playback and manual controls.
+* **Quick Contact**: One-click consultation booking via email (`mailto:`) and a fixed WhatsApp chat button.
+* **Scroll-Reveal Animations**: Lightweight entrance transitions powered by an `IntersectionObserver` hook.
 
 ---
 
@@ -148,20 +134,6 @@ Once started, open the local URL provided in the terminal (typically `http://loc
   ```bash
   npm run preview
   ```
-
----
-
-## 🎨 Design & UI
-
-* **Color Palette**:
-  * **Deep Navy (`#0F172A`)**: Primary background conveying authority, solemnity, and prestige.
-  * **Warm Gold (`#D4AF37`)**: Accent color symbolizing justice, excellence, and quality.
-  * **Light Surface (`#F8FAFC`)**: Clean, contrasting background for practice and testimonial sections.
-* **Typography**:
-  * **Display Font**: *Playfair Display* (classic serif) for headlines, imparting legal tradition and distinction.
-  * **Body Font**: *Inter* (modern sans-serif) for clean readability and interface elements.
-* **Visual Motifs**: Subtle geometric grid backgrounds, hairline gold dividers, corner borders, and glassmorphic card elements with soft backdrop blurs.
-* **Motion & Responsiveness**: Fluid grid layouts paired with subtle scroll-reveal entrance effects, optimized for seamless viewing across all screen dimensions.
 
 ---
 
